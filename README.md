@@ -17,7 +17,7 @@ If you’ve lived on earth for the past two years, then you are well aware of ev
 ## Technologies
 
 * MongoDB, Express, React, Node – the MERN stack
-* Mongoose, GraphQL, Jest, Semantic UI-React, npm
+* Mongoose, GraphQL, Jest, Material UI-React, npm
 * Paradigms used in app construction: Object-Oriented Programming, Model-View-Controller
 
 ## Story
