@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Typography,
   Card,
   CardActions,
@@ -13,11 +14,17 @@ const AddVaxCard = () => {
   return (
     <>
       <Box
-        component="form"
-        sx={{ "& .MuiTextField-root": { m: 1, width: "25ch" } }}
-        noValidate
-        autoComplete="off"
+        align="left"
+        sx={{
+          height: "100vh",
+          width: "100%",
+          maxWidth: 2000,
+          background: "#00738c",
+        }}
       >
+        <Typography variant="h2" sx={{ color: "#94f684" }} padding="50px">
+          Add a Card
+        </Typography>
         <TextField
           requiredid="outlined-required"
           label="Required"
@@ -28,13 +35,14 @@ const AddVaxCard = () => {
           label="Required"
           defaultValue="Vaccination Date"
         />
-      </Box>
       <TextField
         requiredid="outlined-required"
         label="Required"
         defaultValue="Vaccination Id"
       />
+      </Box>
       <div>
+
         <CssBaseline />
       </div>
     </>

@@ -14,43 +14,55 @@ const AddFamily = () => {
   return (
     <>
       <Box
-        component="form"
+        align="left"
         sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
+          height: "100vh",
+          width: "100%",
+          maxWidth: 2000,
+          background: "#00738c",
         }}
-        noValidate
-        autoComplete="off"
       >
-        <div>
-          <CssBaseline />
+        <Typography variant="h2" sx={{ color: "#94f684" }} padding="50px">
+          Add a Household
+        </Typography>
 
-          <TextField
-            required
-            id="outlined-required"
-            label="Required"
-            defaultValue="Household Nickname"
-          />
-          <TextField
-            required
-            id="outlined-required"
-            label="Required"
-            defaultValue="Parent and/or Guardian Last Name(s)"
-          />
-          <TextField
-            required
-            id="outlined-required"
-            label="Required"
-            defaultValue="Parent and/or Guardian First Name(s)"
-          />
-          <TextField
-            id="outlined-number"
-            label="Number of Family Members"
-            type="number"
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-        </div>
+        <Box
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <div>
+            <TextField
+              required
+              id="outlined-required"
+              label="Required"
+              defaultValue="Household Nickname"
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Required"
+              defaultValue="Parent and/or Guardian Last Name(s)"
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Required"
+              defaultValue="Parent and/or Guardian First Name(s)"
+            />
+            <TextField
+              id="outlined-number"
+              label="Number of Family Members"
+              type="number"
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </div>
+        </Box>
       </Box>
     </>
   );
