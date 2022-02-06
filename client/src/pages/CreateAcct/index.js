@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@mui/material";
 // import { border, borderColor, flexbox } from '@mui/system';
-import Logo from "../../../src/components/Logo";
+import Logo from "../../components/Logo";
 import Password from "../../components/Password/Index";
 
 const CreateAcct = () => {
@@ -26,11 +26,11 @@ const CreateAcct = () => {
       >
         <Box>
       
-            <Logo/>
+            <Logo />
         
         </Box>
         <Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} sx={{ justifyContent: 'flex-end' }}>
           <Grid item xs={8}sx={{ alignContent: 'flex-end' }}>
             <Typography variant="body1">
               Create Your Virtual Vaccine Card Today!
