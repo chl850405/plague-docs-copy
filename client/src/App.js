@@ -10,13 +10,11 @@ const App = () => {
       <CssBaseline />
       <Navbar position="relative">
       </Navbar>
-      <main>
-        <div>
-          <Container>
-            <CreateAcct />
-          </Container>
-        </div>
-      </main>
+    
+
+            <CreateAcct position="relative"/>
+    
+   
     </>
   );
 };

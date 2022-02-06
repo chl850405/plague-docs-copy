@@ -38,7 +38,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <AppBar className={classes.root}>
+      <AppBar className={classes.root} sx={{background: '#00738c'}}>
       <React.Fragment>
         <Box
           sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", textAlign: "center"}}
