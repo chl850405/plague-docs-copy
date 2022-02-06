@@ -11,7 +11,7 @@ const CreateAcct = () => {
   <Logo />
   <About/>
 </Stack>
-\</Box>
+</Box>
 </>
     );
 }

@@ -7,7 +7,11 @@ const Logo = () => {
     return(
 <>
 <Box>
-<Avatar src={image}/>
+<Avatar
+  alt="Remy Sharp"
+  src="image"
+  sx={{ width: 300, height: 300 }}
+/>
 </Box>
 </>
     );
