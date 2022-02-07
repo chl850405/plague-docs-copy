@@ -34,11 +34,10 @@ const SavedCards = () => {
           height: "100vh",
           width: "100%",
           maxWidth: 2000,
-          background: " #94f684",
-         
+          background: "#00738c",
         }}
       >
-        <Typography variant="h2" sx={{ color: "#00738c" }} padding="50px">
+        <Typography variant="h2" sx={{ color: "#94f684" }} padding="50px">
           Saved Cards
         </Typography>
         <Paper elevation={10} style={paperStyle}   sx={{background: '#94f684',color: '#00738c'}}> 
