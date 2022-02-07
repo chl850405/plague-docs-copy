@@ -1,5 +1,6 @@
+import { CssBaseline } from "@mui/material";
 import React from "react";
-import { BrowserRouter as Router,  Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import CreateAcct from "./pages/CreateAcct";
 import AddFamily from "./pages/AddFamily";
@@ -13,10 +14,8 @@ const App = () => {
     <>
       <Router>
         <Navbar position="relative">
-          
-            <Route path="/SavedCards" component={SavedCards} />
-            <Route path="/AddFamily" component={AddFamily} />
-          
+          <Route path="/SavedCards" component={SavedCards} />
+          <Route path="/AddFamily" component={AddFamily} />
         </Navbar>
         <About />
         <CreateAcct />
