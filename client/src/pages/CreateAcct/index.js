@@ -1,18 +1,27 @@
 import * as React from "react";
 import {
   Box,
-  Stack,
+  Paper,
   Container,
   Grid,
   Typography,
   TextField,
+  Button
 } from "@mui/material";
 // import { border, borderColor, flexbox } from '@mui/system';
 import Logo from "../../components/Logo";
 import Password from "../../components/Password/Index";
 
 const CreateAcct = () => {
+  const paperStyle = {
+    padding: 20,
+    height: "70vh",
+    width: 500,
+    margin: "20px auto",
+  };
+  const btnstyle = { margin: "8px 0" };
   return (
+  
     <>
       <Container
         sx={{
@@ -21,7 +30,8 @@ const CreateAcct = () => {
           display: "flex",
           background: "#00738c",
           alignItems: "center",
-          color: "#94f684"
+          color: "#94f684",
+          justifyContent: 'space-around'
         }}
       >
         <Box>
@@ -30,7 +40,8 @@ const CreateAcct = () => {
         
         </Box>
         <Box>
-          <Grid container spacing={2} sx={{ justifyContent: 'flex-end' }}>
+          <Grid container spacing={2}>
+          <Paper elevation={10} style={paperStyle}   sx={{background: '#94f684',color: '#00738c'}}>
           <Grid item xs={8}sx={{ alignContent: 'flex-end' }}>
             <Typography variant="body1">
               Create Your Virtual Vaccine Card Today!
@@ -65,6 +76,16 @@ const CreateAcct = () => {
           <Grid item xs={8}>
             <Password/>
           </Grid>
+          <Button
+        sx={{background: '#00738c',color: '#94f684',}}
+          type="submit"
+          variant="contained"
+          style={btnstyle}
+          fullWidth
+        >
+          Create Account
+        </Button>
+          </Paper>
           </Grid>
         </Box>
       </Container>

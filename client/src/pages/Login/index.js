@@ -1,95 +1,72 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { Typography } from "@mui/material";
+import React from "react";
+import {
+  Grid,
+  Paper,
+  Box,
+  TextField,
+  Button,
+  Typography,
+  Link,
+} from "@mui/material";
 
-const Password = () => {
-  const [values, setValues] = React.useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
+const Login = () => {
+  const paperStyle = {
+    padding: 20,
+    height: "70vh",
+    width: 280,
+    margin: "20px auto",
   };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-
+  // const avatarStyle = { backgroundColor: "#1bbd7e" };
+  const btnstyle = { margin: "8px 0" };
   return (
-    <>
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          height: "100vh",
-          width: "100%",
-          maxWidth: 2000,
-          background: "#00738c",
-        }}
-      >
-        <div>
-          <Typography variant="h2" sx={{ color: "#94f684" }} padding="50px">
-            Login
-          </Typography>
-          <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-            <OutlinedInput
-              id="outlined-adornment-weight"
-              value={values.weight}
-              onChange={handleChange("weight")}
-              endAdornment={<InputAdornment position="end">kg</InputAdornment>}
-              aria-describedby="outlined-weight-helper-text"
-              inputProps={{
-                "aria-label": "weight",
-              }}
-            />
-            <FormHelperText id="outlined-weight-helper-text"></FormHelperText>
-          </FormControl>
-          <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-            <InputLabel htmlFor="outlined-adornment-password">
-              Password
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-password"
-              type={values.showPassword ? "text" : "password"}
-              value={values.password}
-              onChange={handleChange("password")}
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                </InputAdornment>
-              }
-              label="Password"
-            />
-          </FormControl>
-        </div>
-      </Box>
-    </>
+    <Box
+    align="left"
+    sx={{
+      height: "100vh",
+      width: "100%",
+      maxWidth: 2000,
+      background: "#00738c",
+      color: '#94f684'
+    }}
+  >
+    <Grid>
+      <Paper elevation={10} style={paperStyle}   sx={{background: '#94f684',color: '#00738c',}}>
+        <Grid align="center"   sx={{background: '#00738c',color: '#94f684',}}>
+          <h2>Sign In</h2>
+        </Grid>
+        <TextField
+          label="Username"
+          placeholder="Enter username"
+          fullWidth
+          required
+        />
+        <TextField
+          label="Password"
+          placeholder="Enter password"
+          type="password"
+          fullWidth
+          required
+        />
+        <Button
+        sx={{background: '#00738c',color: '#94f684',}}
+          type="submit"
+          variant="contained"
+          style={btnstyle}
+          fullWidth
+        >
+          Sign in
+        </Button>
+        <Typography>
+          <Link href="#">Forgot password ?</Link>
+        </Typography>
+        <Typography>
+          {" "}
+          Do you have an account ?<Link href="#">Sign Up</Link>
+        </Typography>
+      </Paper>
+    </Grid>
+    </Box>
   );
 };
 
-export default Password;
+export default Login;
