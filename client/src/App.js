@@ -1,5 +1,6 @@
-import { Container, CssBaseline } from "@mui/material";
+import {CssBaseline } from "@mui/material";
 import React from "react";
+// import { BrowserRouter as Route } from "react-router-dom"
 import Navbar from "./components/Navbar";
 import CreateAcct from "./pages/CreateAcct";
 import AddFamily from "./pages/AddFamily";
@@ -11,17 +12,13 @@ const App = () => {
   return (
     <>
       <CssBaseline />
-      <Navbar position="relative"></Navbar>
-      <main>
-        <div>
-          <Container>
+      <Navbar position="relative">
+      {/* <Route path="/savedCards" component={SavedCards} /> */}
+      </Navbar>
             <CreateAcct />
             <AddFamily />
             <AddVaxCard />
             <SavedCards />
-          </Container>
-        </div>
-      </main>
     </>
   );
 };

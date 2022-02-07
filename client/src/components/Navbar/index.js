@@ -6,13 +6,14 @@ import {
   Menu,
   MenuItem,
   ListItemIcon,
-  Divider,
   IconButton,
   Tooltip,
 } from "@mui/material";
+import { Link } from 'react-router'
 import Settings from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { makeStyles } from "@mui/styles";
+import SavedCards from "../../pages/SavedCards";
 
 const useStyles = makeStyles({
   root: {
@@ -35,7 +36,9 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
+    
     <>
       <AppBar className={classes.root} sx={{ background: "#00738c" }}>
         <React.Fragment>
@@ -97,11 +100,10 @@ const Navbar = () => {
             transformOrigin={{ horizontal: "right", vertical: "top" }}
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
           >
-            <MenuItem>My Account</MenuItem>
-            <MenuItem>My Cards</MenuItem>
-            <Divider />
-            <MenuItem>Add Family</MenuItem>
-            <MenuItem>
+            <MenuItem  containerElement={<Link to="SavedCards" />}
+  primaryText="Saved Cards"> My Cards</MenuItem>
+            <MenuItem onClick={handleClose}>Add Family</MenuItem>
+            <MenuItem onClick={handleClose}>
               <ListItemIcon>
                 <LogoutIcon fontSize="small" />
               </ListItemIcon>
