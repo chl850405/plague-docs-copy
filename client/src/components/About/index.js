@@ -1,7 +1,13 @@
 import React from "react";
-import { Typography, Box, Button, ButtonGroup } from "@mui/material";
+import { Typography, Box, Button, ButtonGroup, Paper, Grid } from "@mui/material";
 
 const About = () => {
+  const paperStyle = {
+    padding: 20,
+    height: "70vh",
+    width: 500,
+    margin: "20px auto",
+  };
   return (
     <>
       <Box
@@ -17,9 +23,9 @@ const About = () => {
           <Typography variant="h2" sx={{ color: "#94f684" }} padding="50px">
             Plague Docs
           </Typography>
+          <Paper elevation={10} style={paperStyle}   sx={{background: '#94f684',color: '#00738c'}}>
           <Typography
             variant="h6"
-            sx={{ color: "#94f684" }}
             padding="50px"
             alignment="Center"
           >
@@ -29,14 +35,23 @@ const About = () => {
           </Typography>
           <br />
           <br />
+         
           <ButtonGroup variant="text" aria-label="text-button-group">
-            <Button variant="outlined" sx={{ color: "#94f684" }}>
+          <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <Button variant="outlined" sx={{background: "#00738c", color: "#94f684" }}>
               Login
             </Button>
-            <Button variant="outlined" sx={{ color: "#94f684" }}>
+            </Grid>
+            <Grid item xs={6}>
+            <Button variant="outlined" sx={{ background: "#00738c",color: "#94f684" }}>
               Signup
             </Button>
+            </Grid>
+            </Grid>
           </ButtonGroup>
+         
+          </Paper>
         </Box>
       </Box>
       <Box sx={{ alignContent: "center" }}></Box>

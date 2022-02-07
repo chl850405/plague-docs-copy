@@ -2,15 +2,18 @@ import React from "react";
 import {
   Box,
   Typography,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
+Paper,
   CssBaseline,
   TextField,
 } from "@mui/material";
 
 const AddVaxCard = () => {
+  const paperStyle = {
+    padding: 20,
+    height: "70vh",
+    width: 1100,
+    margin: "20px auto"
+  };
   return (
     <>
       <Box
@@ -25,6 +28,7 @@ const AddVaxCard = () => {
         <Typography variant="h2" sx={{ color: "#94f684" }} padding="50px">
           Add a Card
         </Typography>
+        <Paper elevation={10} style={paperStyle}   sx={{background: '#94f684',color: '#00738c'}}>
         <TextField
           requiredid="outlined-required"
           label="Required"
@@ -40,6 +44,7 @@ const AddVaxCard = () => {
         label="Required"
         defaultValue="Vaccination Id"
       />
+      </Paper>
       </Box>
       <div>
 

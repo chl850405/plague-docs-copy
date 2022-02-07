@@ -3,14 +3,16 @@ import {
   Box,
   TextField,
   Typography,
-  AppBar,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
+Paper
 } from "@mui/material";
 
 const AddFamily = () => {
+  const paperStyle = {
+    padding: 20,
+    height: "70vh",
+    width: 1100,
+    margin: "20px auto"
+  };
   return (
     <>
       <Box
@@ -34,6 +36,7 @@ const AddFamily = () => {
           noValidate
           autoComplete="off"
         >
+          <Paper elevation={10} style={paperStyle}   sx={{background: '#94f684',color: '#00738c'}}>
           <div>
             <TextField
               required
@@ -62,6 +65,7 @@ const AddFamily = () => {
               }}
             />
           </div>
+          </Paper>
         </Box>
       </Box>
     </>
