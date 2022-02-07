@@ -95,5 +95,5 @@ SO THAT I do not have to carry around the physical card
 
 ## Deployment&Repository
 
-Live URL: https://pl4gu3-d0cs.herokuapp.com// <br/>
+Live URL: http://pl4gu3-d0cs.herokuapp.com/ <br/>
 GitHub Repository: https://github.com/chl850405/plague-docs-copy
