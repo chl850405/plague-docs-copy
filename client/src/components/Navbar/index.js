@@ -8,8 +8,8 @@ import {
   ListItemIcon,
   IconButton,
   Tooltip,
+  Link
 } from "@mui/material";
-import { Link } from 'react-router'
 import Settings from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { makeStyles } from "@mui/styles";

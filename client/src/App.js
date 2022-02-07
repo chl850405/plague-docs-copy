@@ -6,7 +6,8 @@ import CreateAcct from "./pages/CreateAcct";
 import AddFamily from "./pages/AddFamily";
 import AddVaxCard from "./pages/AddVaxCard";
 import SavedCards from "./pages/SavedCards";
-
+import Login from "./pages/Login";
+import About from "./components/About"
 
 const App = () => {
   return (
@@ -15,7 +16,9 @@ const App = () => {
       <Navbar position="relative">
       {/* <Route path="/savedCards" component={SavedCards} /> */}
       </Navbar>
+            <About/>
             <CreateAcct />
+            <Login/>
             <AddFamily />
             <AddVaxCard />
             <SavedCards />
