@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useRef} from "react";
 import {
   Box,
   Paper,
@@ -13,6 +13,12 @@ import Logo from "../../components/Logo";
 import Password from "../../components/Password/Index";
 
 const CreateAcct = () => {
+  const valueRef = useRef('') //creating a refernce for TextField Component
+
+    const sendValue = () => {
+        return console.log(valueRef.current.value) //on clicking button accesing current value of TextField and outputing it to console 
+    }
+
   const paperStyle = {
     padding: 20,
     height: "70vh",
@@ -23,6 +29,7 @@ const CreateAcct = () => {
   return (
   
     <>
+    <form noValidate autoComplete='off'>
       <Container
         sx={{
           minWidth: "100%",
@@ -57,6 +64,7 @@ const CreateAcct = () => {
               helperText="Please enter your first name"
               id="demo-helper-text-misaligned, margin-normal, fullWidth "
               label="First Name"
+              inputRef={valueRef}   //connecting inputRef property of TextField to the valueRef
             />
           </Grid>
           <Grid item xs={8}>
@@ -64,13 +72,14 @@ const CreateAcct = () => {
               helperText="Please enter your last name"
               id="demo-helper-text-misaligned, margin-normal, fullWidth"
               label="Last Name"
+              inputRef={valueRef}   //connecting inputRef property of TextField to the valueRef
             />
           </Grid>
           <Grid item xs={8}>
             <TextField fullWidth 
               helperText="Please enter your email"
               id="demo-helper-text-misaligned, margin-normal, fullWidth"
-              label="Email Address"
+              inputRef={valueRef}   //connecting inputRef property of TextField to the valueRef
             />
           </Grid>
           <Grid item xs={8}>
@@ -82,6 +91,7 @@ const CreateAcct = () => {
           variant="contained"
           style={btnstyle}
           fullWidth
+          onClick={sendValue}
         >
           Create Account
         </Button>
@@ -89,6 +99,7 @@ const CreateAcct = () => {
           </Grid>
         </Box>
       </Container>
+      </form>
     </>
   );
 };

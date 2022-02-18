@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
@@ -36,9 +35,11 @@ const Password = () => {
 <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
 <div>
         <FormControl  variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          {/* <InputLabel htmlFor="outlined-adornment-password"></InputLabel> */}
           <OutlinedInput fullWidth
             id="outlined-adornment-password"
+            type={values.showPassword ? 'text' : 'password'}
+            placeholder="Password"
             value={values.password}
             onChange={handleChange('password')}
             endAdornment={

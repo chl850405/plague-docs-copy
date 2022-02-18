@@ -15,9 +15,9 @@ const AddFamily = () => {
   };
   return (
     <>
-      <Box
+      <Box 
         align="left"
-        sx={{
+        sx={{ 
           height: "100vh",
           width: "100%",
           maxWidth: 2000,

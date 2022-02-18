@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import {
   Grid,
   Paper,
@@ -8,8 +8,18 @@ import {
   Typography,
   Link,
 } from "@mui/material";
+import Password from "../../components/Password/Index";
+
+
+
 
 const Login = () => {
+
+  const valueRef = useRef('') //creating a refernce for TextField Component
+  
+  const sendValue = () => {
+    return console.log(valueRef.current.value) //on clicking button accesing current value of TextField and outputing it to console 
+}
   const paperStyle = {
     padding: 20,
     height: "70vh",
@@ -35,24 +45,20 @@ const Login = () => {
           <h2>Sign In</h2>
         </Grid>
         <TextField
-          label="Username"
-          placeholder="Enter username"
+          placeholder="Enter Email Address"
+          multiline
+          inputRef={valueRef}   //connecting inputRef property of TextField to the valueRef
           fullWidth
           required
         />
-        <TextField
-          label="Password"
-          placeholder="Enter password"
-          type="password"
-          fullWidth
-          required
-        />
+   <Password/>
         <Button
         sx={{background: '#00738c',color: '#94f684',}}
           type="submit"
           variant="contained"
           style={btnstyle}
           fullWidth
+          onClick={sendValue}
         >
           Sign in
         </Button>
