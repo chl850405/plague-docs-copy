@@ -87,7 +87,7 @@ SO THAT I do not have to carry around the physical card
   => Inform associated Household contacts of their exposures, provide risk assessments, symptom red flags, and instructions for next steps<br/>
   => Provide daily check-in surveys of symptoms for monitoring and follow-ups<br/>
   => Sharing of community resources for mental health associated with illness/loss<br/><br/>
-* Provide data from and to high-risk/priority situations and patients in:<br/<br/>
+* Provide data from and to high-risk/priority situations and patients in:<br/><br/>
   => Health care (including long-term care) facilities<br/>
   => Student housing<br/>
   => Homeless shelters<br/>
