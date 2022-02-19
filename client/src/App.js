@@ -15,12 +15,13 @@ function App() {
       <div>
         <Navbar/>
         <Switch>
-        <Route path="/" component={About} />
+    
           <Route path="/login" component={Login} />
           <Route path="/sign up" component={CreateAcct} />
           {/* <Route path="/add family" component={AddVaxCard} /> */}
           <Route path="/add family" component={AddFamily} />
           <Route path="/my cards" component={SavedCards} />
+          <Route path="/" component={About} />
         </Switch>
       </div>
     </Router>
