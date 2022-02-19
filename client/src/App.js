@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router,  Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import CreateAcct from "./pages/CreateAcct";
@@ -11,20 +11,19 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Navbar/>
+    <div className="_wrapper">
+      <Router>
+        <Navbar />
         <Switch>
-    
-          <Route path="/login" component={Login} />
-          <Route path="/sign up" component={CreateAcct} />
+          <Route path="/pages/Login" component={Login} />
+          <Route path="pages/CreateAcct" component={CreateAcct} />
           {/* <Route path="/add family" component={AddVaxCard} /> */}
-          <Route path="/add family" component={AddFamily} />
-          <Route path="/my cards" component={SavedCards} />
+          <Route path="/pages/AddFamily" component={AddFamily} />
+          <Route path="/pages/SavedCards" component={SavedCards} />
           <Route path="/" component={About} />
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

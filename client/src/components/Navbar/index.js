@@ -98,6 +98,9 @@ const Navbar = () => {
           <Link to="../../pages/about">About</Link>
           </MenuItem>
           <MenuItem>
+          <Link to="../../pages/Login">Login</Link>
+          </MenuItem>
+          <MenuItem>
             <Link to="../../pages/CreateAcct">Signup</Link>
           </MenuItem>
           <MenuItem>
@@ -110,7 +113,7 @@ const Navbar = () => {
           <ListItemIcon>
             <LogoutIcon fontSize="small" />
           </ListItemIcon>
-            Logout
+          <Link to="../../pages/about">Logout</Link>
           </MenuItem>
         </Menu>
       </React.Fragment>
