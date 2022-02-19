@@ -1,7 +1,11 @@
 import React from "react";
+// import { useNavigate } from "react-router-dom";
 import { Typography, Box, Button, ButtonGroup, Paper, Grid } from "@mui/material";
+// import Login from "../Login";
+// import CreateAcct from "../CreateAcct";
 
 const About = () => {
+  // const navigate = useNavigate();
   const paperStyle = {
     padding: 20,
     height: "70vh",
@@ -39,7 +43,7 @@ const About = () => {
           <ButtonGroup variant="text" aria-label="text-button-group">
           <Grid container spacing={2}>
           <Grid item xs={6}>
-            <Button variant="outlined" sx={{background: "#00738c", color: "#94f684" }}>
+            <Button variant="outlined" sx={{background: "#00738c", color: "#94f684" }} >
               Login
             </Button>
             </Grid>
