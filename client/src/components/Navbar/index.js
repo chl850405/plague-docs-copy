@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import {
   Typography,
   AppBar,
@@ -8,7 +9,7 @@ import {
   ListItemIcon,
   IconButton,
   Tooltip,
-  Link
+
 } from "@mui/material";
 import Settings from "@mui/icons-material/Settings";
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -72,7 +73,7 @@ const Navbar = () => {
               mt: 1.5,
               "& .MuiAvatar-root": {
                 width: 32,
-                height: 32,
+                height: 100,
                 ml: -0.5,
                 mr: 1,
               },
@@ -94,16 +95,25 @@ const Navbar = () => {
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
           <MenuItem>
-          <Link to="../../pages/SavedCards">My Cards</Link>
+          <Link to="../../pages/about">About</Link>
+          </MenuItem>
+          <MenuItem>
+          <Link to="../../pages/Login">Login</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="../../pages/CreateAcct">Signup</Link>
           </MenuItem>
           <MenuItem>
             <Link to="../../pages/AddFamily">Add Family</Link>
           </MenuItem>
           <MenuItem>
+            <Link to="../../pages/SavedCards">My Cards</Link>
+          </MenuItem>
+          <MenuItem>
           <ListItemIcon>
             <LogoutIcon fontSize="small" />
           </ListItemIcon>
-            Logout
+          <Link to="../../pages/about">Logout</Link>
           </MenuItem>
         </Menu>
       </React.Fragment>
