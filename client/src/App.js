@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
+import About from "./components/About";
 import CreateAcct from "./pages/CreateAcct";
 // import AddVaxCard from "./pages/AddVaxCard";
 import AddFamily from "./pages/AddFamily";
@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/pages/Login" component={Login} />
-          <Route path="pages/CreateAcct" component={CreateAcct} />
+          <Route path="/pages/CreateAcct" component={CreateAcct} />
           {/* <Route path="/add family" component={AddVaxCard} /> */}
           <Route path="/pages/AddFamily" component={AddFamily} />
           <Route path="/pages/SavedCards" component={SavedCards} />
